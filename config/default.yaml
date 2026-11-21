@@ -1,0 +1,29 @@
+# Air Mouse Default Configuration
+camera:
+  camera_id: 0
+  width: 640
+  height: 480
+  target_fps: 60
+
+filter:
+  freq: 30.0
+  mincutoff: 1.0     # Lower = less jitter when still (e.g., 0.5 - 1.5)
+  beta: 5.0          # Higher = less lag during fast flicks (e.g., 2.0 - 10.0 for normalized coords)
+  dcutoff: 1.0
+
+roi:
+  x_min: 0.20        # Active box left edge
+  x_max: 0.80        # Active box right edge
+  y_min: 0.20        # Active box top edge
+  y_max: 0.80        # Active box bottom edge
+
+gestures:
+  pinch_press_thresh: 0.28    # Normalized distance to register pinch
+  pinch_release_thresh: 0.40  # Normalized distance to release pinch
+  drag_delay: 0.25            # Seconds before hold turns into drag
+  double_click_delay: 0.35    # Max seconds between clicks for double-click
+  scroll_threshold: 0.35      # Index & middle distance for scroll mode
+  scroll_speed: 30.0          # Scroll wheel velocity multiplier
+
+gui: true
+sensitivity: 1.0

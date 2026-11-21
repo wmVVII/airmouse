@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "airmouse"
+version = "1.0.0"
+description = "High-performance low-latency cross-platform Air Mouse using computer vision"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    { name = "AirMouse Team" }
+]
+dependencies = [
+    "opencv-python>=4.8.0",
+    "mediapipe>=0.10.0",
+    "pynput>=1.7.6",
+    "numpy>=1.24.0",
+    "pyyaml>=6.0",
+]
+
+[project.scripts]
+airmouse = "airmouse.main:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
